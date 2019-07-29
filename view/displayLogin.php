@@ -5,7 +5,7 @@ ob_start();
 
 ?>
 
-<form action="displayLogin.php" name="logg" id="form" method="post">
+<form action="" name="logg" id="form" method="post">
 
         <p> CONNEXION </p>
         <input type="text" name="mail" id="mail">

@@ -33,9 +33,14 @@ function displayPage(){
         case 'loginForm':
             displayLogin();
             break;
+
+        case 'addTravel' :
+            displayAddTravel();
+            break;
             
         default:
             displayTravels();
             break;
     }
 }
+

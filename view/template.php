@@ -30,29 +30,29 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="index.php?=page=voyages" id="parcourir"> Parcourir <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.php?page=voyages" id="parcourir"> Parcourir <span class="sr-only">(current)</span></a>
           </li>
           <?php
-        //   if(!isset($_SESSION['mail'])){
+          if(!isset($_SESSION['mail'])){
             ?>
           <li class="nav-item ">
-            <button class="btn btn-sm btn-outline-secondary bg-danger" href="index.php?=page=loginForm" name="deco" id="deco" type="submit"> Connexion </button>
+            <a href="index.php?page=loginForm"><button class="btn btn-sm btn-outline-secondary bg-danger" name="deco" id="deco" type="submit"> Connexion </button></a>
           </li>
 
           <?php
-        //   }
+          }
           ?>
           <li class="nav-item">
             <a class="nav-link" href="addTravel.php" id="ajout">Ajouter Voyage </a>
           </li>
            <?php 
-        //   if(isset($_SESSION['mail'])){
+          if(isset($_SESSION['mail'])){
             ?>
           <li class="nav-item">
-            <a href="deco.php"><button class="btn btn-sm btn-outline-secondary bg-danger " name="deco" id="deco"> Deconnexion </button></a>
+            <a href="index.php?sd=1"><button class="btn btn-sm btn-outline-secondary bg-danger " name="sd" id="deco"> Deconnexion </button></a>
           </li>
           <?php
-        //   }
+          }
           ?>
         </ul>
       </div>

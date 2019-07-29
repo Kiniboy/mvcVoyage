@@ -2,5 +2,41 @@
 
 require_once 'controller/frontendController.php';
 
-displayTravels();
+
+function login() {
+
+    require_once 'model/backendModel.php';
+
+    $user = getUser($_POST['mail']);
+
+    if($user){
+
+        
+
+        if (password_verify($_POST['pwd'], $user['password'])) {
+            $_SESSION['mail']= $_POST['mail'];
+            echo 'connecté(e)';
+            displayTravels();
+        
+        }
+        else {
+
+            echo 'Mot de passe invalide';
+            
+
+        } 
+    } else {
+            echo 'pas de user';
+        }
+
+
+}
+
+
+
+
+
+
+
+
 
