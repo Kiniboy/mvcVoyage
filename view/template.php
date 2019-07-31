@@ -42,10 +42,16 @@
           <?php
           }
           ?>
+          <?php
+          if(isset($_SESSION['mail'])){
+            ?>
           <li class="nav-item">
-            <a class="nav-link" href="addTravel.php" id="ajout">Ajouter Voyage </a>
+            <a class="nav-link" href="index.php?page=displayAdd" id="addTravel" name="addTravel">Ajouter Voyage </a>
           </li>
-           <?php 
+          <?php
+          } else {
+            displayTravels();
+          }
           if(isset($_SESSION['mail'])){
             ?>
           <li class="nav-item">

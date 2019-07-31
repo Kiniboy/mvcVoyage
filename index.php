@@ -13,16 +13,21 @@ if (isset($_GET['sd']) && $_GET['sd'] == 1) {
 }
 
 else if(isset($_POST['mail'])){
-    include 'controller/backend.php';
+    require_once 'controller/backend.php';
     login();
 }
 
-
 elseif(isset($_GET['page'])) {
-    displayPage();
+    if($_GET['page'] == 'displayAdd' && isset($_SESSION['mail'])){
+        require_once 'controller/backend.php';
+        displayAddTravel();
+    }else{
+        displayPage();
+    }
 }else{
     displayTravels();
 }
+
 
 
 

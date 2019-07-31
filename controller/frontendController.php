@@ -18,12 +18,6 @@ function displayLogin(){
 
 }
 
-
-function displayAddTravel(){
-
-    require 'view/displayAddTravel.php';
-}
-
 function displayPage(){
     switch ($_GET['page']) {
         case 'voyages':
